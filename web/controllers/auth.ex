@@ -29,7 +29,7 @@ defmodule Rumbl.Auth do
     repo = Keyword.fetch!(opts, :repo)
     user = repo.get_by(Rumbl.User, username: username)
 
-    IO.inspect user
+    #IO.inspect user
 
     cond do
       user && checkpw(given_pass, user.password_hash) ->
